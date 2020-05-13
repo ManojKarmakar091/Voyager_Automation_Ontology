@@ -1,0 +1,10 @@
+/node_modules/
+/package-lock.json
+/reports/allure-reports/
+/logger/Logs/
+/.vscode/
+node_modules
+package-lock.json
+reports/allure-reports/
+logger/Logs/
+.vscode/

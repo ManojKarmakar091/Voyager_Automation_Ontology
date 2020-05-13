@@ -1,0 +1,30 @@
+{
+  "name": "mars_demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "preTest": "npm install &&webdriver-manager update",
+    "testSmoke": "npm run preTest &&protractor config.js --grep=Smoke &&npm run postTest",
+    "testRegression": "npm run preTest &&protractor config.js --grep=Regression &&postTest",
+    "postTest": "allure generate --output D:/Tomcat/webapps/allure ./reports/allure-reports --clean"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@azure/cosmos": "3.5.2",
+    "axios": "0.19.2",
+    "azure-keyvault": "^3.0.5",
+    "config.ini": "0.0.60",
+    "protractor": "^5.4.3",
+    "util": "^0.12.2",
+    "xlsx": "^0.15.5"
+  },
+  "devDependencies": {
+    "allure-commandline": "^2.13.0",
+    "documentdb": "^1.6.0",
+    "iniparser": "1.0.5",
+    "jasmine-allure-reporter": "1.0.2",
+    "log4js": "6.1.2"
+  }
+}
